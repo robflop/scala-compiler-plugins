@@ -22,3 +22,8 @@ When this plugin is activated, dividing by zero will throw a compiler error.
 <summary>Say Hi plugin (StandardPlugin)</summary>
 When this plugin is activated and a string with the content "Hi, compiler!" is defined, the compiler will log "Hi, programmer!".
 </details>
+
+<details>
+<summary>Addition quota plugin (StandardPlugin)</summary>
+When this plugin is activated, only a specified number of addition signs may be placed in code before the compiler outputs errors about a quota being exhausted.
+</details>
