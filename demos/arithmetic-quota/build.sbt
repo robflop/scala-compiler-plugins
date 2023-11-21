@@ -1,15 +1,15 @@
 import Dependencies.*
 
-lazy val additionQuotaDemo = project
+lazy val arithmeticQuotaDemo = project
   .in(file("."))
   .settings(
-    name := "addition-quota-demo",
+    name := "arithmetic-quota-demo",
     scalaVersion := scala3Version,
 
     libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
 
     autoCompilerPlugins := true,
-    addCompilerPlugin("compiler.plugins" %% "addition-quota-plugin" % "0.0.1-SNAPSHOT"),
+    addCompilerPlugin("compiler.plugins" %% "arithmetic-quota-plugin" % "0.0.1-SNAPSHOT"),
 
     publish / skip := true
   )

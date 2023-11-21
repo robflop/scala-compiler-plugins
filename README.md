@@ -24,6 +24,8 @@ When this plugin is activated and a string with the content "Hi, compiler!" is d
 </details>
 
 <details>
-<summary>Addition quota plugin (StandardPlugin)</summary>
-When this plugin is activated, only a specified number of addition signs may be placed in code before the compiler outputs errors about a quota being exhausted.
+<summary>Arithmetic quota plugin (StandardPlugin)</summary>
+When this plugin is activated, only a specified number of arithmetic signs may be placed in code before the compiler outputs errors about a quota being exhausted.
+
+Subtractions count as -1 additions, multiplications count as RHS number additions and divisions count as RHS number subtractions.
 </details>

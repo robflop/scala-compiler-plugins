@@ -9,7 +9,7 @@ lazy val scalaCompilerPlugins = project
   .aggregate(
     divisionByZeroPlugin,
     sayHiPlugin,
-    additionQuotaPlugin
+    arithmeticQuotaPlugin
   )
   .settings(
     name := "scala-compiler-plugins",
@@ -19,11 +19,11 @@ lazy val scalaCompilerPlugins = project
 
 lazy val divisionByZeroPlugin = project.in(file("plugins/division-by-zero"))
 lazy val sayHiPlugin = project.in(file("plugins/say-hi"))
-lazy val additionQuotaPlugin = project.in(file("plugins/addition-quota"))
+lazy val arithmeticQuotaPlugin = project.in(file("plugins/arithmetic-quota"))
 
 lazy val divisionByZeroDemo = project.in(file("demos/division-by-zero"))
 lazy val sayHiDemo = project.in(file("demos/say-hi"))
-lazy val additionQuotaDemo = project.in(file("demos/addition-quota"))
+lazy val arithmeticQuotaDemo = project.in(file("demos/arithmetic-quota"))
 
 lazy val publishPluginsLocal = taskKey[Unit]("Publish plugins locally")
 publishPluginsLocal := {
