@@ -36,7 +36,7 @@ class SayHiPhase extends PluginPhase:
 
   override def transformAssign(tree: Assign)(using ctx: Context): Tree =
     tree match
-      case Assign(_, Literal(Constant("Hi, compiler!"))) =>
+      case Assign(lhs, Literal(Constant("Hi, compiler!"))) if lhs.tpe <:< defn.StringType =>
         report.warning("Hi, programmer!", tree.sourcePos)
       case _ =>
         ()
