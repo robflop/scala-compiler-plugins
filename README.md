@@ -2,7 +2,7 @@
 
 ### Usage
 
-This is a scala 3 sbt project. Its structure is adapted from https://github.com/mattmoore/scala-compiler-plugins.
+This is a scala 3 sbt project. Its structure is adapted from [mattmoore](https://github.com/mattmoore)'s [scala-compiler-plugins](https://github.com/mattmoore/scala-compiler-plugins).
 
 To start, compile and publish the compiler plugins locally via `sbt publishPluginsLocal` (or as `publishPluginsLocal` on the shell). This is a custom command invoking the `clean`, `compile`, `package` and `publishLocal` commands successively.
 
@@ -16,4 +16,9 @@ For more information on the sbt-dotty plugin, see the
 <details>
 <summary>Division by zero plugin (StandardPlugin)</summary>
 When this plugin is activated, dividing by zero will throw a compiler error.
+</details>
+
+<details>
+<summary>Say Hi plugin (StandardPlugin)</summary>
+When this plugin is activated and a string with the content "Hi, compiler!" is defined, the compiler will log "Hi, programmer!".
 </details>

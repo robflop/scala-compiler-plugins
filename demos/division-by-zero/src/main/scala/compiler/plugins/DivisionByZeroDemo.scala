@@ -1,6 +1,5 @@
 package compiler.plugins
 
-@main def DivisionByZeroDemo: Unit =
-  val two = 2
-  val calculation = two / 0
+@main def DivisionByZeroDemo(): Unit =
+  val calculation = 39 / 0
   println(calculation)

@@ -30,6 +30,12 @@ class DivisionByZeroPhase extends PluginPhase:
     tree match
       case Apply(Select(rcvr, nme.DIV), List(Literal(Constant(0)))) if rcvr.tpe <:< defn.IntType =>
           report.error("Illegal division: Divide by zero", tree.srcPos)
+      case Apply(Select(rcvr, nme.DIV), List(Literal(Constant(0)))) if rcvr.tpe <:< defn.FloatType =>
+        report.error("Illegal division: Divide by zero", tree.srcPos)
+      case Apply(Select(rcvr, nme.DIV), List(Literal(Constant(0)))) if rcvr.tpe <:< defn.DoubleType =>
+        report.error("Illegal division: Divide by zero", tree.srcPos)
+      case Apply(Select(rcvr, nme.DIV), List(Literal(Constant(0)))) if rcvr.tpe <:< defn.LongType =>
+        report.error("Illegal division: Divide by zero", tree.srcPos)
       case _ =>
         ()
     tree
